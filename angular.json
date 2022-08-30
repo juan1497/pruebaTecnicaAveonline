@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "eleccionesPresidenciales"
+  "cli": {
+    "analytics": "b19a33b4-3b5b-4ef2-b0b0-90e9466abdb5"
+  }
 }

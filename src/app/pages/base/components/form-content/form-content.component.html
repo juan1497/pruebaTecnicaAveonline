@@ -1,0 +1,47 @@
+<div class=" d-flex justify-content-around flex-wrap">
+  <div class="col ms-5">
+    <form (ngSubmit)="onSubmit()" [formGroup]="voteForm">
+      <div class=" d-flex justify-content-around">
+        <div class="col col-lg-2 ">
+          <label class="form-label text-center ">Nombre:</label>
+          <input id="name" class="form-control " formControlName="name" type="text">
+        </div>
+        <div class="col col-lg-2 ">
+          <label class="form-label text-center">Edad:</label>
+          <input id="age" class="form-control " formControlName="age" type="number">
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col col-md-auto mt-3">
+          <label class="form-label" >Candidato:</label>
+          <select id="candidate" class=" form-select" formControlName="candidate"  >
+              <ng-container *ngFor="let choice of candidates">
+                <option value={{choice}} >{{choice}}</option>
+              </ng-container>
+          </select>
+          <button id="submit" type="submit" class="btn btn-danger mt-4"[disabled]="!voteForm.valid">Guardar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col ">
+    <ngx-charts-bar-vertical
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="single"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  (select)="onSelect($event)">
+  </ngx-charts-bar-vertical>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,24 @@
+<div class="row ">
+    <ng-container *ngFor="let candidate of candidates">
+        <div class="col m-5">
+            <h3 class="text-center"> {{candidate}}</h3>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th scope="col" class="text-center">Nombre</th>
+                    <th scope="col" class="text-center">Edad</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let choice of choices">
+                        <ng-container *ngIf="choice.candidate==candidate">
+                            <td class="text-center">{{choice.name}}</td>
+                            <td class="text-center">{{choice.age}}</td>
+                        </ng-container>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </ng-container>
+</div>
+
