@@ -5,10 +5,17 @@
         <div class="col col-lg-2 ">
           <label class="form-label text-center ">Nombre:</label>
           <input id="name" class="form-control " formControlName="name" type="text">
+          <ng-container *ngIf="voteForm.get('name')!.errors && voteForm.get('name')!.dirty">
+            <p class="error" *ngIf="voteForm.get('name')!.hasError('required')">Este campo es requerido</p>
+          </ng-container>
         </div>
         <div class="col col-lg-2 ">
           <label class="form-label text-center">Edad:</label>
-          <input id="age" class="form-control " formControlName="age" type="number">
+          <input id="age" class="form-control " formControlName="age" type="number" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
+          <ng-container *ngIf="voteForm.get('age')!.errors && voteForm.get('age')!.dirty">
+            <p class="error" *ngIf="voteForm.get('age')!.hasError('required')">Este campo es requerido</p>
+            <p class="error" *ngIf="voteForm.get('age')!.hasError('Older')">debes ser mayor de edad</p>
+          </ng-container>
         </div>
       </div>
       <div class="row justify-content-md-center">
@@ -29,14 +36,8 @@
   [view]="view"
   [scheme]="colorScheme"
   [results]="single"
-  [gradient]="gradient"
   [xAxis]="showXAxis"
   [yAxis]="showYAxis"
-  [legend]="showLegend"
-  [showXAxisLabel]="showXAxisLabel"
-  [showYAxisLabel]="showYAxisLabel"
-  [xAxisLabel]="xAxisLabel"
-  [yAxisLabel]="yAxisLabel"
   (select)="onSelect($event)">
   </ngx-charts-bar-vertical>
   </div>

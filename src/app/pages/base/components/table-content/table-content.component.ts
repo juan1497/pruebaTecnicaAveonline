@@ -8,16 +8,24 @@ import { ChoicesService } from 'src/shared/services/choices.service';
   styleUrls: ['./table-content.component.scss']
 })
 export class TableContentComponent implements OnInit {
+  /** 
+   * Candidates guarda los candidatos
+   * @type {string[]}
+   */
   candidates!:string[];
+  /** 
+   * Choices guarda los datos o registros de los posibles votos 
+   * @type {Choice[]}
+   */
   choices!:Choice[]
+  /** 
+   * @constructor obtener los datos 
+   * @param choicesService @type {ChoiceService}
+   */
   constructor(choicesService:ChoicesService) { 
     this.choices=choicesService.getChoices();
     this.candidates=choicesService.getCandidates();
     
   }
-
-  ngOnInit(): void {
-  }
-  
-
+  ngOnInit(): void {}
 }

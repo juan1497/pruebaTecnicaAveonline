@@ -1,0 +1,1009 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>elecciones-presidenciales documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/original.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">elecciones-presidenciales documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li
+  >
+  FormContentComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/base/components/form-content/form-content.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-form-content</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./form-content.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./form-content.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#candidates" >candidates</a>
+                            </li>
+                            <li>
+                                <a href="#colorScheme" >colorScheme</a>
+                            </li>
+                            <li>
+                                <a href="#data" >data</a>
+                            </li>
+                            <li>
+                                <a href="#showXAxis" >showXAxis</a>
+                            </li>
+                            <li>
+                                <a href="#showYAxis" >showYAxis</a>
+                            </li>
+                            <li>
+                                <a href="#single" >single</a>
+                            </li>
+                            <li>
+                                <a href="#view" >view</a>
+                            </li>
+                            <li>
+                                <a href="#voteForm" >voteForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onLoadData" >onLoadData</a>
+                            </li>
+                            <li>
+                                <a href="#onSelect" >onSelect</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(formBuilder: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, choicesService: <a href="../injectables/ChoicesService.html" target="_self">ChoicesService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="57" class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:57</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>choicesService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ChoicesService.html" target="_self" >ChoicesService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="68"
+                            class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:68</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onLoadData"></a>
+                    <span class="name">
+                        <span ><b>onLoadData</b></span>
+                        <a href="#onLoadData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onLoadData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="90"
+                            class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:90</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnLoadData se encarga de consumir el servicio ChoiceServices para obtener y pintar los datos en la grafica con sus condiciones</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSelect"></a>
+                    <span class="name">
+                        <span ><b>onSelect</b></span>
+                        <a href="#onSelect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSelect(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="108"
+                            class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:108</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <span ><b>onSubmit</b></span>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="73"
+                            class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnSubmit verifica que el formulario cumple con las validaciones y obtiene el valor de cada campo ,
+despues llama al servicio que se encargada de guardar los datos en el front-end y subir los datos al grafico.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Propiedades
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="candidates"></a>
+                    <span class="name">
+                        <span ><b>candidates</b></span>
+                        <a href="#candidates"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="22" class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Candidates se encarga de guardar los nombres de lo candidatos presidenciales .</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="colorScheme"></a>
+                    <span class="name">
+                        <span ><b>colorScheme</b></span>
+                        <a href="#colorScheme"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Color</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>{
+    name: &#x27;myScheme&#x27;,
+    selectable: true,
+    group: ScaleType.Ordinal,
+    domain: [&#x27;#e3170a&#x27;, &#x27;#6847fc&#x27;, &#x27;#02ff00&#x27;],
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="52" class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>ColorScheme se encarga de guardar los colores de la grafica.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="data"></a>
+                    <span class="name">
+                        <span ><b>data</b></span>
+                        <a href="#data"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="32" class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Data se encarga de obtener los datos del servicio .</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showXAxis"></a>
+                    <span class="name">
+                        <span ><b>showXAxis</b></span>
+                        <a href="#showXAxis"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="42" class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>showXAxis mostrar u ocultar  el eje X.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showYAxis"></a>
+                    <span class="name">
+                        <span ><b>showYAxis</b></span>
+                        <a href="#showYAxis"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="47" class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>showYAxis mostrar u ocultar la etiqueta del eje Y.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="single"></a>
+                    <span class="name">
+                        <span ><b>single</b></span>
+                        <a href="#single"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="27" class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Single se encarga de guardar los datos ya filtrados que seran graficados .</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="view"></a>
+                    <span class="name">
+                        <span ><b>view</b></span>
+                        <a href="#view"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>[number, number]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>[300, 300]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="37" class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>View dimensiones de la grafica [ancho,alto].</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="voteForm"></a>
+                    <span class="name">
+                        <span ><b>voteForm</b></span>
+                        <a href="#voteForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="17" class="link-to-prism">src/app/pages/base/components/form-content/form-content.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>VoteForm encargada de guardar los datos del formulario .</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import {FormGroup,FormBuilder,Validators} from &#x27;@angular/forms&#x27;
+import {Choice} from &#x27;../../../../../shared/models/choice&#x27;
+import { ChoicesService } from &#x27;src/shared/services/choices.service&#x27;;
+import { Color, ScaleType } from &#x27;@swimlane/ngx-charts&#x27;;
+
+@Component({
+  selector: &#x27;app-form-content&#x27;,
+  templateUrl: &#x27;./form-content.component.html&#x27;,
+  styleUrls: [&#x27;./form-content.component.scss&#x27;]
+})
+export class FormContentComponent implements OnInit {
+  /** 
+   * VoteForm encargada de guardar los datos del formulario .
+   * @type {FormGroup}
+   */
+  voteForm: FormGroup;
+  /** 
+   * Candidates se encarga de guardar los nombres de lo candidatos presidenciales .
+   * @type {string[]} 
+   */
+  candidates:string[];
+  /** 
+   * Single se encarga de guardar los datos ya filtrados que seran graficados .
+   * @type {any[]}
+   */
+  single!:any[];
+  /** 
+   * Data se encarga de obtener los datos del servicio .
+   * @type {any[]}
+   */
+  data!:any[];
+  /** 
+   * View dimensiones de la grafica [ancho,alto].
+   * @type {[number,number]}
+   */
+  view: [number,number] &#x3D; [300, 300];
+  /** 
+   * showXAxis mostrar u ocultar  el eje X.
+   * @type {Boolean}
+   */
+  showXAxis &#x3D; true;
+  /** 
+   * showYAxis mostrar u ocultar la etiqueta del eje Y.
+   * @type {Boolean}
+   */
+  showYAxis &#x3D; true;
+/** 
+   * ColorScheme se encarga de guardar los colores de la grafica.
+   * @type {Color}
+   */
+  colorScheme: Color &#x3D; {
+    name: &#x27;myScheme&#x27;,
+    selectable: true,
+    group: ScaleType.Ordinal,
+    domain: [&#x27;#e3170a&#x27;, &#x27;#6847fc&#x27;, &#x27;#02ff00&#x27;],
+  };
+  
+  constructor(private formBuilder:FormBuilder,private choicesService:ChoicesService) {
+    this.candidates&#x3D;this.choicesService.getCandidates();
+    this.voteForm&#x3D;this.formBuilder.group({
+      name:[&#x27;&#x27;,[Validators.required,Validators.maxLength(30)]],
+       age:[&#x27;&#x27;,[Validators.required]],
+      candidate:[&#x27;&#x27;,[Validators.required]]
+    })
+   }
+
+  ngOnInit(): void {}
+  /** 
+   * OnSubmit verifica que el formulario cumple con las validaciones y obtiene el valor de cada campo ,
+   * despues llama al servicio que se encargada de guardar los datos en el front-end y subir los datos al grafico.
+   */
+  onSubmit() {
+    if(this.voteForm.valid){
+        const choice:Choice&#x3D;{
+        name:this.voteForm.get(&quot;name&quot;)!.value,
+        age:this.voteForm.get(&quot;age&quot;)!.value,
+        candidate:this.voteForm.get(&quot;candidate&quot;)!.value
+      }
+      this.choicesService.pushChoice(choice)
+      this.onLoadData()
+      this.voteForm.reset();
+    }else{
+      alert(&quot;algo ha fallado&quot;)
+    }
+  }
+  /** 
+   * OnLoadData se encarga de consumir el servicio ChoiceServices para obtener y pintar los datos en la grafica con sus condiciones
+   */
+  onLoadData() {
+    this.data&#x3D;this.choicesService.getChoices();
+    this.single&#x3D;[
+      {
+        &quot;name&quot;:&quot;18-29&quot;,
+        &quot;value&quot;:this.data.filter(c&#x3D;&gt;(c.age&gt;&#x3D;18&amp;&amp;c.age&lt;&#x3D;29)).length
+      },
+      {
+        &quot;name&quot;:&quot;30-50&quot;,
+        &quot;value&quot;:this.data.filter(c&#x3D;&gt;(c.age&gt;&#x3D;30&amp;&amp;c.age&lt;&#x3D;50)).length
+      },
+      {
+        &quot;name&quot;:&quot;&lt;50&quot;,
+        &quot;value&quot;:this.data.filter(c&#x3D;&gt;c.age&gt;50).length
+      }
+    ]
+
+  }
+  onSelect(event:any) {
+    console.log(event);
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot; d-flex justify-content-around flex-wrap&quot;&gt;
+  &lt;div class&#x3D;&quot;col ms-5&quot;&gt;
+    &lt;form (ngSubmit)&#x3D;&quot;onSubmit()&quot; [formGroup]&#x3D;&quot;voteForm&quot;&gt;
+      &lt;div class&#x3D;&quot; d-flex justify-content-around&quot;&gt;
+        &lt;div class&#x3D;&quot;col col-lg-2 &quot;&gt;
+          &lt;label class&#x3D;&quot;form-label text-center &quot;&gt;Nombre:&lt;/label&gt;
+          &lt;input id&#x3D;&quot;name&quot; class&#x3D;&quot;form-control &quot; formControlName&#x3D;&quot;name&quot; type&#x3D;&quot;text&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col col-lg-2 &quot;&gt;
+          &lt;label class&#x3D;&quot;form-label text-center&quot;&gt;Edad:&lt;/label&gt;
+          &lt;input id&#x3D;&quot;age&quot; class&#x3D;&quot;form-control &quot; formControlName&#x3D;&quot;age&quot; type&#x3D;&quot;number&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;row justify-content-md-center&quot;&gt;
+        &lt;div class&#x3D;&quot;col col-md-auto mt-3&quot;&gt;
+          &lt;label class&#x3D;&quot;form-label&quot; &gt;Candidato:&lt;/label&gt;
+          &lt;select id&#x3D;&quot;candidate&quot; class&#x3D;&quot; form-select&quot; formControlName&#x3D;&quot;candidate&quot;  &gt;
+              &lt;ng-container *ngFor&#x3D;&quot;let choice of candidates&quot;&gt;
+                &lt;option value&#x3D;{{choice}} &gt;{{choice}}&lt;/option&gt;
+              &lt;/ng-container&gt;
+          &lt;/select&gt;
+          &lt;button id&#x3D;&quot;submit&quot; type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-danger mt-4&quot;[disabled]&#x3D;&quot;!voteForm.valid&quot;&gt;Guardar&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col &quot;&gt;
+    &lt;ngx-charts-bar-vertical
+  [view]&#x3D;&quot;view&quot;
+  [scheme]&#x3D;&quot;colorScheme&quot;
+  [results]&#x3D;&quot;single&quot;
+  [xAxis]&#x3D;&quot;showXAxis&quot;
+  [yAxis]&#x3D;&quot;showYAxis&quot;
+  (select)&#x3D;&quot;onSelect($event)&quot;&gt;
+  &lt;/ngx-charts-bar-vertical&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./form-content.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">#name,#age,#candidate,#submit{
+    width: 150px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class=" d-flex justify-content-around flex-wrap">  <div class="col ms-5">    <form (ngSubmit)="onSubmit()" [formGroup]="voteForm">      <div class=" d-flex justify-content-around">        <div class="col col-lg-2 ">          <label class="form-label text-center ">Nombre:</label>          <input id="name" class="form-control " formControlName="name" type="text">        </div>        <div class="col col-lg-2 ">          <label class="form-label text-center">Edad:</label>          <input id="age" class="form-control " formControlName="age" type="number">        </div>      </div>      <div class="row justify-content-md-center">        <div class="col col-md-auto mt-3">          <label class="form-label" >Candidato:</label>          <select id="candidate" class=" form-select" formControlName="candidate"  >              <ng-container *ngFor="let choice of candidates">                <option value={{choice}} >{{choice}}</option>              </ng-container>          </select>          <button id="submit" type="submit" class="btn btn-danger mt-4"[disabled]="!voteForm.valid">Guardar</button>        </div>      </div>    </form>  </div>  <div class="col ">    <ngx-charts-bar-vertical  [view]="view"  [scheme]="colorScheme"  [results]="single"  [xAxis]="showXAxis"  [yAxis]="showYAxis"  (select)="onSelect($event)">  </ngx-charts-bar-vertical>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'FormContentComponent', 'selector': 'app-form-content'},{'name': 'TableContentComponent', 'selector': 'app-table-content'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'FormContentComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FormContentComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
